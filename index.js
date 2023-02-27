@@ -3,3 +3,5 @@ function listName(name) {
 }
 
 listName("Alex");
+
+console.log("Hello Alex");
