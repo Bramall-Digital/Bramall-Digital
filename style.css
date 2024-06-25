@@ -45,8 +45,7 @@ nav ul li a::after {
     left: 0;
 }
 
-nav ul li a:hover::after {
-    width: 100%;
+
 }
 
 section {
