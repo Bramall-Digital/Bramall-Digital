@@ -1,7 +1,17 @@
-function listName(name) {
-  console.log("Hello" + name);
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const links = document.querySelectorAll("nav ul li a");
 
-listName("Alex");
+  links.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
 
-console.log("Hello Alex");
+      const targetId = this.getAttribute("href").substring(1);
+      const targetSection = document.getElementById(targetId);
+
+      window.scrollTo({
+        top: targetSection.offsetTop - 50,
+        behavior: "smooth",
+      });
+    });
+  });
+});
